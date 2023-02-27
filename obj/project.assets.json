@@ -466,11 +466,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BrenoVitor-GabrielJefferson\\RpgApi\\RpgApi.csproj",
+      "projectUniqueName": "E:\\rpgapi\\RpgApi-main\\RpgApi.csproj",
       "projectName": "RpgApi",
-      "projectPath": "D:\\BrenoVitor-GabrielJefferson\\RpgApi\\RpgApi.csproj",
+      "projectPath": "E:\\rpgapi\\RpgApi-main\\RpgApi.csproj",
       "packagesPath": "C:\\Users\\etechas\\.nuget\\packages\\",
-      "outputPath": "D:\\BrenoVitor-GabrielJefferson\\RpgApi\\obj\\",
+      "outputPath": "E:\\rpgapi\\RpgApi-main\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

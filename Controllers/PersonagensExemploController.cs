@@ -7,8 +7,8 @@ namespace RpgApi.Controllers
     [Route("[Controller]")]
     public class PersonagensExemploController : ControllerBase
     {
-
-
+        
+        
         /*Personagem p1 = new Personagem();
         p1.Nome = "Gerald";
         personagens.Add(p1);
@@ -31,104 +31,23 @@ namespace RpgApi.Controllers
         [HttpGet("GetAll")]
         public IActionResult Get()
         {
-            return Ok(personagens);
+             return Ok(personagens);
         }
 
         [HttpGet("Get")]
         public IActionResult GetFirst()
         {
             Personagem p = personagens[0];
-            return Ok(p);
+             return Ok(p);
         }
 
         [HttpGet("{id}")]
         public IActionResult GetSingle(int id)
         {
-            return Ok(personagens.FirstOrDefault(personagens => personagens.Id == id));
-        }
-
-        [HttpPost]
-        public IActionResult AddPersonagem(Personagem novoPersonagem)
-        {
-            personagens.Add(novoPersonagem);
-            return Ok(personagens);
+             return Ok(personagens.FirstOrDefault(personagens => personagens.Id == id));
         }
 
 
-
-        [HttpPut]
-        public IActionResult UpdatePersonagem(Personagem p)
-        {
-            Personagem personagemAlterado = personagens.Find(pers => pers.Id == p.Id);
-            personagemAlterado.Nome = p.Nome;
-            personagemAlterado.PontosVida = p.PontosVida;
-            personagemAlterado.Forca = p.Forca;
-            personagemAlterado.Defesa = p.Defesa;
-            personagemAlterado.Inteligencia = p.Inteligencia;
-            personagemAlterado.Classe = p.Classe;
-
-            return Ok(personagens);
-
-        }
-
-        [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
-        {
-            personagens.RemoveAll(pers => pers.Id == id);
-
-            return Ok(personagens);
-        }
-
-        [HttpGet("GetOrdenado")]
-        public IActionResult GetOrdem()
-        {
-            List<Personagem> listaFinal = personagens.OrderBy(p => p.Forca).ToList();
-            return Ok(listaFinal);
-        }
+}       
         
-        [HttpGet("GetContagem")]
-
-        public IActionResult GetQuantidade()
-
-        {
-            return Ok("Quantidade de personagens: " + personagens.Count);
-        }
-
-        [HttpGet("GetSomaForca")]
-
-        public IActionResult GetSomaForca()
-        {
-            return Ok(personagens.Sum(p => p.Forca));
-        }
-
-        [HttpGet("GetSemCavaleiro")]
-        public IActionResult GetSemCavaleiro()
-        {
-            List<Personagem> listaBusca = personagens.FindAll(p => p.Classe != ClasseEnum.Cavaleiro);
-            return Ok(listaBusca);
-        }
-
-        [HttpGet("GetByNomeAproximado/{nome}")]
-        public IActionResult GetByNomeAproximado(string nome)
-        {
-            List<Personagem> listaBusca = personagens.FindAll(p => p.Nome.Contains(nome));
-            return Ok(listaBusca);
-        }
-
-        [HttpGet("GetRemovendoMago")]
-        public IActionResult GetRemovendoMagos()
-        {
-            Personagem pRemove = personagens.Find(p => p.Classe == ClasseEnum.Mago);
-            personagens.Remove(pRemove);
-            return Ok("Personagem removido: " + pRemove.Nome);
-        }
-
-        [HttpGet("GetByForca/{forca}")]
-        public IActionResult Get(int forca)
-        {
-            List<Personagem> listaFinal = personagens.FindAll(p => p.Forca == forca);
-            return Ok(listaFinal);
-        }
-    }
-
 }

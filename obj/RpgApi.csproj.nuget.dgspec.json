@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\rpgapi\\RpgApi-main\\RpgApi.csproj": {}
+    "D:\\BrenoVitor-GabrielJefferson\\RpgApi\\RpgApi.csproj": {}
   },
   "projects": {
-    "E:\\rpgapi\\RpgApi-main\\RpgApi.csproj": {
+    "D:\\BrenoVitor-GabrielJefferson\\RpgApi\\RpgApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\rpgapi\\RpgApi-main\\RpgApi.csproj",
+        "projectUniqueName": "D:\\BrenoVitor-GabrielJefferson\\RpgApi\\RpgApi.csproj",
         "projectName": "RpgApi",
-        "projectPath": "E:\\rpgapi\\RpgApi-main\\RpgApi.csproj",
+        "projectPath": "D:\\BrenoVitor-GabrielJefferson\\RpgApi\\RpgApi.csproj",
         "packagesPath": "C:\\Users\\etechas\\.nuget\\packages\\",
-        "outputPath": "E:\\rpgapi\\RpgApi-main\\obj\\",
+        "outputPath": "D:\\BrenoVitor-GabrielJefferson\\RpgApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -48,6 +48,16 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.3, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

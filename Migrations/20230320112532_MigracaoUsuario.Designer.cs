@@ -12,7 +12,7 @@ using RpgApi.Data;
 namespace RpgApi.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230313115150_MigracaoUsuario")]
+    [Migration("20230320112532_MigracaoUsuario")]
     partial class MigracaoUsuario
     {
         /// <inheritdoc />
@@ -139,8 +139,11 @@ namespace RpgApi.Migrations
                     b.Property<DateTime?>("DataAcesso")
                         .HasColumnType("datetime2");
 
-                    b.Property<byte[]>("Foto")
+                    b.Property<string>("Email")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<byte[]>("Foto")
                         .HasColumnType("varbinary(max)");
 
                     b.Property<double?>("Latitude")
@@ -150,12 +153,14 @@ namespace RpgApi.Migrations
                         .HasColumnType("float");
 
                     b.Property<byte[]>("PasswordHash")
-                        .IsRequired()
                         .HasColumnType("varbinary(max)");
 
                     b.Property<byte[]>("PasswordSalt")
-                        .IsRequired()
                         .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("Perfil")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Username")
                         .IsRequired()
@@ -164,6 +169,17 @@ namespace RpgApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Usuarios");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Email = "seuEmail@gmail.com",
+                            Latitude = -23.520024100000001,
+                            Longitude = -46.596497999999997,
+                            Perfil = "Admin",
+                            Username = "UsuarioAdmin"
+                        });
                 });
 #pragma warning restore 612, 618
         }
